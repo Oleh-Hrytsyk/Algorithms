@@ -8,3 +8,7 @@
 4. [Comb sort](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Comb_sort);
 5. [Gnome sort](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Gnome_sort);
 6. [Heap sort](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Heap_sort);
+
+## Sieves:
+
+1. [Sieve of Eratosthenes](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Sieve_of_eratosthenes);
