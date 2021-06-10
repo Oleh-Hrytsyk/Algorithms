@@ -12,7 +12,7 @@ vector<int> generate_arr(int size){
 }
 
 void sieve_of_Eratosthenes(vector<int> arr){
-        for(unsigned int i=1; i<10 && i<arr.size(); i++){
+        for(unsigned int i=1; i<arr.size(); i++){
             if(arr[i]!=-1){
                 for(unsigned int j=arr[i]+i; j<arr.size(); j+=arr[i]){
                     arr[j]=-1;
