@@ -8,10 +8,9 @@ template<typename T>
 vector<T> bubble_sort(vector<T> arr) {
     T tmp;
     bool check = true;
-    int counter = 0;
     while (check) {
         check = false;
-        for (unsigned int i = 0; i < arr.size()-1-counter; i++)
+        for (unsigned int i = 0; i < arr.size()-1; i++)
         {
             if (arr[i] > arr[i + 1]) {
                 tmp = move(arr[i]);
