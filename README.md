@@ -13,3 +13,7 @@
 ## Sieves:
 
 1. [Sieve of Eratosthenes](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Sieve_of_eratosthenes);
+
+## Math algorithms:
+
+1. [Exponentiation by squaring](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Exponentiation_by_squaring);
