@@ -9,6 +9,7 @@
 5. [Gnome sort](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Gnome_sort);
 6. [Heap sort](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Heap_sort);
 7. [Merge sort](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Merge_sort);
+8. [Cycle sort](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Cycle_sort);
 
 ## Sieves:
 
