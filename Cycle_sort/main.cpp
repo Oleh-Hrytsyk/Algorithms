@@ -4,44 +4,55 @@
 
 template<typename T>
 void cycleSort(std::vector<T> &t_array){
-    T tmpVal;
-    int index;
-    std::vector<T> cycles = {};
-    for(unsigned int i = 0; i<t_array.size(); ++i){
 
-        std::vector<T> cycles = {};
-        index = i;
-        tmpVal = t_array[i];
+    T currElement;
+    int pos;
 
-        do{
-            cycles.push_back(tmpVal);
-            index = std::count_if(t_array.begin(), t_array.end(), [tmpVal, t_array,i](T b){
-                return (tmpVal>=b);
-            })-1;
+    for(unsigned long outerIndex = 0; outerIndex < t_array.size()-2; ++outerIndex ){
 
-            if(tmpVal < t_array[i]){
-                ++index;
+        currElement = t_array[outerIndex];
+
+        pos = outerIndex + std::count_if(t_array.begin()+outerIndex+1, t_array.end(), [&currElement](T arrElement) -> bool{
+            return currElement>arrElement;
+        });
+
+        if(currElement>t_array[outerIndex]){
+            --pos;
+        }
+
+        if(pos == outerIndex){
+            continue;
+        }
+
+        while (currElement == t_array[pos]) {
+            ++pos;
+        }
+
+        if(pos != outerIndex){
+          std::swap(currElement, t_array[pos]);
+        }
+
+        while(pos != outerIndex){
+            pos = outerIndex + std::count_if(t_array.begin()+outerIndex+1, t_array.end(), [&currElement](T arrElement) -> bool{
+                return currElement>arrElement;
+            });
+
+            if(currElement > t_array[outerIndex]){
+                --pos;
             }
-
-            T tmpVal2 =  t_array[index];
-            t_array[index] = tmpVal;
-            tmpVal = tmpVal2;
-
-        }while ((unsigned int)index != i);
-
-        if(cycles.size()>1){
-            std::cout <<"cycle { ";
-            for(unsigned int i = 0; i<cycles.size(); ++i){
-                std::cout << cycles[i] <<" ";
+            while (currElement == t_array[pos]) {
+                ++pos;
             }
-            std::cout <<"} "<<std::endl;
+            if(currElement != t_array[pos]){
+                std::swap(currElement, t_array[pos]);
+            }
         }
     }
 }
 
 int main()
 {
-    std::vector<int> arr = { 333,98, -1, 44, 7, 99, 2, 1000, 45, 1, 100};
+    std::vector<int> arr = { 11, 5, 8, 2, 14, 14, -1, 2, 7, 3, 2, 2, 2};
 
     cycleSort<int>(arr);
 
