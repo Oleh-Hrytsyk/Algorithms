@@ -18,3 +18,8 @@
 ## Math algorithms:
 
 1. [Exponentiation by squaring](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Exponentiation_by_squaring);
+
+## Searching algorithms:
+
+1. [Linear search](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Linear_search);
+2. [Binary search](https://github.com/Oleh-Hrytsyk/Algorithms/tree/master/Binary_search);
